@@ -153,6 +153,13 @@ public class Globals {
 			System.out.println(msg);
 		}
 		
+		/*@Author - shardha
+		Remove al the cookies 
+		*/
+		
+		public void deletecookies(){
+			driver.manage().deleteAllCookies();
+		}
 
 		
 		// Will help in taking screenshot for any kind of failures like Assertions,
