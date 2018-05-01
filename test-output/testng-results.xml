@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="3" failed="0" total="3" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24801" started-at="2018-05-01T13:23:44Z" finished-at="2018-05-01T13:24:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24801" started-at="2018-05-01T13:23:44Z" finished-at="2018-05-01T13:24:09Z">
+      <class name="TestCases.LoginPageTest">
+        <test-method status="FAIL" signature="launchbrowser()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="launchbrowser" is-config="true" duration-ms="0" started-at="2018-05-01T18:53:44Z" finished-at="2018-05-01T18:53:44Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Error communicating with the remote browser. It may have died.
+Build info: version: '2.49.0', revision: '365eeb4', time: '2016-01-13 18:37:00'
+System info: host: 'Shardha-PC', ip: '192.168.1.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+Session ID: 77a4c8e505b28989b3bea533fe722c33
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Shardha\AppData\Local\Temp\scoped_dir3916_14894, chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, setWindowRect=true, locationContextEnabled=true, mobileEmulationEnabled=false, pageLoadStrategy=normal, version=66.0.3359.139, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.49.0', revision: '365eeb4', time: '2016-01-13 18:37:00'
+System info: host: 'Shardha-PC', ip: '192.168.1.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_60'
+Driver info: driver.version: RemoteWebDriver
+Session ID: 77a4c8e505b28989b3bea533fe722c33
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Shardha\AppData\Local\Temp\scoped_dir3916_14894, chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, setWindowRect=true, locationContextEnabled=true, mobileEmulationEnabled=false, pageLoadStrategy=normal, version=66.0.3359.139, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+	at Global.Globals.browserClose(Globals.java:298)
+	at Global.Globals.setUp(Globals.java:736)
+	at TestCases.LoginPageTest.launchbrowser(LoginPageTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn't taskkill it: Unable to find executable for: taskkill
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:142)
+	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:247)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$2(UnixProcess.java:246)
+	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 31 more
+Caused by: java.lang.NullPointerException: Unable to find executable for: taskkill
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
+	at org.openqa.selenium.os.UnixProcess.<init>(UnixProcess.java:62)
+	at org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:38)
+	at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:138)
+	... 39 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method status="SKIP" signature="closepop()[pri:1, instance:TestCases.LoginPageTest@747fb9e1]" name="closepop" duration-ms="6" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closepop -->
+        <test-method status="SKIP" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="TearDown" is-config="true" duration-ms="0" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="SKIP" signature="launchbrowser()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="launchbrowser" is-config="true" duration-ms="0" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method status="SKIP" signature="LoginPagetitleTest()[pri:2, instance:TestCases.LoginPageTest@747fb9e1]" name="LoginPagetitleTest" duration-ms="6" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPagetitleTest -->
+        <test-method status="SKIP" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="TearDown" is-config="true" duration-ms="0" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method status="SKIP" signature="launchbrowser()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="launchbrowser" is-config="true" duration-ms="0" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method status="SKIP" signature="cswlogoImageTest()[pri:3, instance:TestCases.LoginPageTest@747fb9e1]" name="cswlogoImageTest" duration-ms="6" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cswlogoImageTest -->
+        <test-method status="SKIP" signature="TearDown()[pri:0, instance:TestCases.LoginPageTest@747fb9e1]" name="TearDown" is-config="true" duration-ms="0" started-at="2018-05-01T18:54:09Z" finished-at="2018-05-01T18:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- TestCases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
