@@ -12,42 +12,45 @@ import PageObjects.LoginPage;
 import junit.framework.Assert;
 
 public class LoginPageTest extends Globals{
-	WebDriver driver;
-	LoginPage login = new LoginPage(driver);
-	
 	
 	@BeforeMethod
 	public void launchbrowser() throws Exception  {
-        login.openurl();
+        openurl();
+        deletecookies();
+        
 		
 /* System.setProperty("browser", "Chrome");
  "D:\Embitel\chromedriver.exe"*/
-		
-		 setUp();
-
-	browserNav(csw_url);
-	  		
-	}
+		 /*setUp();
+	browserNav(csw_url);*/
+	  		}
 	
-	@Test (priority = 1)
+	@Test 
 	public void closepop() {
+		LoginPage login = new LoginPage(driver);
 	login.closepopup.click();
+	
+	//PageTitle
+	String title = login.validateloginpageTitle();
+	Assert.assertEquals(title, "Shop Online for Womens Clothes, Bags, Shoes, Accessories in India - Cover Story");
 	}
 	
-	@Test(priority = 2)
+	/*@Test(priority = 2)
 	public void LoginPagetitleTest() {
 		String title = login.validateloginpageTitle();
 		Assert.assertEquals(title, "#1 Shop Online for Womens Clothes, Bags, Shoes, Accessories in India - Cover Story");
-		}
+		}*/
 	
-	@Test(priority = 3)
+	/*@Test(priority = 3)
 	public void cswlogoImageTest() {
 		boolean flag = login.validatecswImage();
 		Assert.assertTrue(flag);
-	}
+	}*/
 
-	@AfterMethod
+	/*@AfterMethod
 	public void TearDown() {
-	     driver.close();
-	}
+		browserClose();
+	     //driver.close();
+	}*/
+	
 }
