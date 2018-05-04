@@ -18,6 +18,8 @@ public class LoginPage extends Globals  {
 		PageFactory.initElements(driver, this);
 	}
 	
+	// Finding the Locators
+	
 	@FindBy(xpath =".//*[@id='popup-newsletter-form']/div[3]/img") 
 	@CacheLookup
 	public WebElement closepopup;
@@ -30,6 +32,44 @@ public class LoginPage extends Globals  {
 	@CacheLookup
 	WebElement cswlogo;
 	
+	// Finding locators for signin_popup
+	@FindBy(xpath = ".//*[@id='mini-cart-header']")
+	@CacheLookup
+	public WebElement minicart;
+	
+	@FindBy(xpath = ".//*[@id='Signin-popup']")
+	@CacheLookup
+	public WebElement clicksignin;
+	
+	@FindBy(xpath= ".//*[@name='LoginForm[number]']")
+    @CacheLookup
+    public WebElement EnterEmailid;
+    
+    @FindBy(xpath= ".//*[@name='LoginForm[password]']")
+    @CacheLookup
+    public WebElement EnterPwd;
+    
+    @FindBy(xpath= ".//*[@class='sign_in_btnbtns green_btn']")
+    @CacheLookup
+    public WebElement ClickSignin;
+	
+    //Locator for Google+/FB signin
+    @FindBy(xpath = ".//*[@class='sign_gplus']")
+    @CacheLookup
+    public WebElement clickgooglesignin;
+    
+    @FindBy(xpath = ".//*[@class='sign_fb']")
+    @CacheLookup
+    public WebElement clickfbsignin;
+    
+    //Locator with otp
+    @FindBy(xpath = ".//*[@id='signOtp']")
+    @CacheLookup
+    public WebElement clickcheckbox;
+    
+    @FindBy(xpath = ".//*[@id='stepOneSubmit']")
+    @CacheLookup
+    public WebElement clicksendotp;
 	
 	//Actions:
 		public String validateloginpageTitle() {
@@ -43,10 +83,6 @@ public class LoginPage extends Globals  {
 		public void closePopUp() throws Exception{
 			Globals.IsClickable(closepopup, 30);
 		}
-		
-		
-	
-	
 	
 
 }
