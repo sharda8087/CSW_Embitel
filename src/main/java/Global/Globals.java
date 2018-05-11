@@ -220,7 +220,7 @@ public class Globals {
 		}
 
 		public void openurl(){
-			System.setProperty("webdriver.chrome.driver", "E:\\lib\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\lib\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.coverstory.co.in/");
@@ -248,7 +248,7 @@ public class Globals {
 				// Optional, if not specified, WebDriver will search your path for
 				// chromedriver.
 				System.setProperty("webdriver.chrome.driver",
-						directoryPath + "./driver/chromedriver.exe");
+						directoryPath + "D:\\lib\\chromedriver_win32\\chromedriver.exe");
 				System.setProperty("webdriver.ie.driver",
 						directoryPath + "\\lib\\DriverRelated\\IE\\IEDriverServer2.53_Win32.exe");
 				System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
@@ -282,6 +282,36 @@ public class Globals {
         catch (NoAlertPresentException ex) {}
       } while ((System.currentTimeMillis() < waitForAlert) && (!boolFound));
     }
+	
+	
+	/**
+	 * @author Shardha sharma (finding broken link in website)
+	 * 
+	 */
+public void VerifyBrokenLink(String urlLink){
+		
+		try{
+			//Use URL Class - Create object of the URL Class and pass the urlLink as parameter 
+            URL link = new URL(urlLink);
+            // Create a connection using URL object (i.e., link)
+            HttpURLConnection httpConn =(HttpURLConnection)link.openConnection();
+            //Set the timeout for 2 seconds
+            httpConn.setConnectTimeout(2000);
+            //connect using connect method
+            httpConn.connect();
+            //use getResponseCode() to get the response code. 
+                if(httpConn.getResponseCode()== 200) {  
+                    System.out.println(urlLink+" - "+httpConn.getResponseMessage());
+                }
+                if(httpConn.getResponseCode()== 404) {
+                    System.out.println(urlLink+" - "+httpConn.getResponseMessage());
+                }
+            }
+            //getResponseCode method returns = IOException - if an error occurred connecting to the server. 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        }
 	
 	/**
 	 * @author CharanReddy BROWSERBack. Takes the browser to the previous page
@@ -481,7 +511,12 @@ public class Globals {
 		public void scrollBottom() {
 			JavascriptExecutor js = ((JavascriptExecutor) driver);
 			js.executeScript("window.scrollTo(0,document.body.scrollHeight); return true");
-			try { wait(2); }catch(Exception e){}
+			try { 
+				wait(2); 
+				}
+			catch(Exception e){
+				
+			}
 			
 		}
 		
@@ -512,6 +547,15 @@ public class Globals {
 		public void select(WebElement element, String selection) {
 			Select dropDown = new Select(element);
 			dropDown.selectByVisibleText(selection);
+		}
+		
+		public void implicitwait(){
+		try{
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
+		catch(Exception e)	{
+			
+		}
 		}
 		
 		/*
@@ -645,7 +689,6 @@ public class Globals {
 			try {
 				new WebDriverWait(driver, timeout) {
 				}.until(new ExpectedCondition<Boolean>() {
-					@Override
 					public Boolean apply(WebDriver driver) {
 						return (driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]")).size() < 1);
 					}
