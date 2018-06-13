@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 01 18:53:44 IST 2018</td>
+<td>Started on:</td><td>Wed Jun 13 14:22:53 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>24 seconds (24801 ms)</td>
+<tr><td>Total time:</td><td>36 seconds (36631 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,187 +67,61 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.LoginPageTest.launchbrowser()'><b>launchbrowser</b><br>Test class: TestCases.LoginPageTest</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb4&apos;, time: &apos;2016-01-13 18:37:00&apos;
-System info: host: &apos;Shardha-PC&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-Driver info: driver.version: RemoteWebDriver
-Session ID: 77a4c8e505b28989b3bea533fe722c33
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Shardha\AppData\Local\Temp\scoped_dir3916_14894, chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, setWindowRect=true, locationContextEnabled=true, mobileEmulationEnabled=false, pageLoadStrategy=normal, version=66.0.3359.139, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
-	at Global.Globals.browserClose(Globals.java:298)
-	at Global.Globals.setUp(Globals.java:736)
-	at TestCases.LoginPageTest.launchbrowser(LoginPageTest.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:142)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:247)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$2(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-	... 31 more
-Caused by: java.lang.NullPointerException: Unable to find executable for: taskkill
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
-	at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
-	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
-	at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:138)
-	... 39 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace96627789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace96627789'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb4&apos;, time: &apos;2016-01-13 18:37:00&apos;
-System info: host: &apos;Shardha-PC&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_60&apos;
-Driver info: driver.version: RemoteWebDriver
-Session ID: 77a4c8e505b28989b3bea533fe722c33
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Shardha\AppData\Local\Temp\scoped_dir3916_14894, chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f)}, networkConnectionEnabled=false, unexpectedAlertBehaviour=, rotatable=false, setWindowRect=true, locationContextEnabled=true, mobileEmulationEnabled=false, pageLoadStrategy=normal, version=66.0.3359.139, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, webStorageEnabled=true, nativeEvents=true, hasTouchScreen=false, applicationCacheEnabled=false, takesScreenshot=true}]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
-	at Global.Globals.browserClose(Globals.java:298)
-	at Global.Globals.setUp(Globals.java:736)
-	at TestCases.LoginPageTest.launchbrowser(LoginPageTest.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:142)
-	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:247)
-	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$2(UnixProcess.java:246)
-	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
-	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
-	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-	... 31 more
-Caused by: java.lang.NullPointerException: Unable to find executable for: taskkill
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
-	at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
-	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
-	at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
-	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:138)
-	... 39 more
-</pre></div></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td title='TestCases.LoginPageTest.LoggedIn()'><b>LoggedIn</b><br>Test class: TestCases.LoginPageTest<br/>
+<a href="#Output-573958827" onClick='toggleBox("Output-573958827", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-573958827" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-573958827">
+Logged In successfully<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>TestCases.LoginPageTest@63e2203c</td></tr>
 <tr>
-<td title='TestCases.LoginPageTest.launchbrowser()'><b>launchbrowser</b><br>Test class: TestCases.LoginPageTest</td>
+<td title='TestCases.LoginPageTest.LoginPagetitleTest()'><b>LoginPagetitleTest</b><br>Test class: TestCases.LoginPageTest<br/>
+<a href="#Output-1624972302" onClick='toggleBox("Output-1624972302", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1624972302" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1624972302">
+successfully Title is verified<br/>
+</div>
+</td>
 <td></td>
 <td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
+<td>TestCases.LoginPageTest@63e2203c</td></tr>
 <tr>
-<td title='TestCases.LoginPageTest.launchbrowser()'><b>launchbrowser</b><br>Test class: TestCases.LoginPageTest</td>
+<td title='TestCases.LoginPageTest.closepop()'><b>closepop</b><br>Test class: TestCases.LoginPageTest<br/>
+<a href="#Output-343812839" onClick='toggleBox("Output-343812839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-343812839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-343812839">
+subscription pop-up is closed successfully<br/>
+</div>
+</td>
 <td></td>
 <td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
+<td>TestCases.LoginPageTest@63e2203c</td></tr>
 <tr>
-<td title='TestCases.LoginPageTest.TearDown()'><b>TearDown</b><br>Test class: TestCases.LoginPageTest</td>
+<td title='TestCases.LoginPageTest.cswlogoImageTest()'><b>cswlogoImageTest</b><br>Test class: TestCases.LoginPageTest<br/>
+<a href="#Output-1048098469" onClick='toggleBox("Output-1048098469", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1048098469" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1048098469">
+coverstory logo is verified<br/>
+</div>
+</td>
 <td></td>
 <td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-<tr>
-<td title='TestCases.LoginPageTest.TearDown()'><b>TearDown</b><br>Test class: TestCases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-<tr>
-<td title='TestCases.LoginPageTest.TearDown()'><b>TearDown</b><br>Test class: TestCases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='TestCases.LoginPageTest.LoginPagetitleTest()'><b>LoginPagetitleTest</b><br>Test class: TestCases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-<tr>
-<td title='TestCases.LoginPageTest.closepop()'><b>closepop</b><br>Test class: TestCases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
-<tr>
-<td title='TestCases.LoginPageTest.cswlogoImageTest()'><b>cswlogoImageTest</b><br>Test class: TestCases.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>TestCases.LoginPageTest@747fb9e1</td></tr>
+<td>TestCases.LoginPageTest@63e2203c</td></tr>
 </table><p>
 </body>
 </html>

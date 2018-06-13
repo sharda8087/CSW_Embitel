@@ -1,16 +1,11 @@
 package PageObjects;
 
-import java.awt.HeadlessException;
-import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import antlr.collections.List;
 import Global.Globals;
 
 public class LoginPage extends Globals {
@@ -30,6 +25,10 @@ public class LoginPage extends Globals {
 	@FindBy(xpath = ".//*[@id='popup-newsletter-form']/div[3]/img")
 	@CacheLookup
 	public WebElement closepopup;
+	
+	@FindBy(xpath= "/html/body")
+	@CacheLookup
+	public WebElement closepopup1;
 
 	@FindBy(xpath = ".//*[@id='page']/header/div/div/div/div[4]/div/div[3]/span")
 	@CacheLookup
@@ -49,10 +48,15 @@ public class LoginPage extends Globals {
 	@FindBy(xpath = ".//*[@id='signPassword']")
 	@CacheLookup
 	public WebElement EnterPwd;
+	
 
 	@FindBy(xpath = ".//*[@id='stepOneSubmit']")
 	@CacheLookup
 	public WebElement ClickSigninbutton;
+	
+	@FindBy(xpath= "/html/body/div[1]/div/div/a")
+	@CacheLookup
+	public WebElement ClickReloadPage;
 
 	// Locator for Google+/FB signin
 	@FindBy(xpath = ".//*[@class='sign_gplus']")
@@ -85,9 +89,6 @@ public class LoginPage extends Globals {
 		Globals.IsClickable(closepopup, 30);
 	}
 	
-	public void BrokenLink()
-	{
 	
-	}
 
 }

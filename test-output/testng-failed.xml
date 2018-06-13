@@ -5,10 +5,8 @@
     <classes>
       <class name="TestCases.LoginPageTest">
         <methods>
+          <include name="HandleMultipleWindow"/>
           <include name="launchbrowser"/>
-          <include name="closepop"/>
-          <include name="LoginPagetitleTest"/>
-          <include name="cswlogoImageTest"/>
         </methods>
       </class> <!-- TestCases.LoginPageTest -->
     </classes>

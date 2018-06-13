@@ -1,7 +1,6 @@
 package Global;
 
 
-import org.junit.rules.TestName;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,71 +10,30 @@ import java.awt.AWTException;
 import java.awt.HeadlessException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.SocketException;
 import java.net.URL;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
-
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.AfterClass;
-
 import static org.junit.Assert.assertTrue;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
-import org.junit.Rule;
-import org.junit.rules.TestName;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.TargetLocator;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -94,8 +52,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 
 
 public class Globals {
@@ -220,7 +176,7 @@ public class Globals {
 		}
 
 		public void openurl(){
-			System.setProperty("webdriver.chrome.driver", "D:\\lib\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D://lib//ChromeDriver_Folder//chromedriver_win32//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.coverstory.co.in/");
@@ -456,7 +412,7 @@ public void VerifyBrokenLink(String urlLink){
 		 * @author CHARAN REDDY getWindowHandle. To get The current window handle
 		 * 
 		 */
-		protected static String getWindowHandle() {
+		public static String getWindowHandle() {
 			return driver.getWindowHandle();
 		}
 
@@ -464,7 +420,7 @@ public void VerifyBrokenLink(String urlLink){
 		 * @author CHARAN REDDY getWindowHandle. To get The current window handles
 		 * 
 		 */
-		protected static Set<String> getWindowHandles() {
+		public static Set<String> getWindowHandles() {
 			return driver.getWindowHandles();
 		}
 		
@@ -689,6 +645,7 @@ public void VerifyBrokenLink(String urlLink){
 			try {
 				new WebDriverWait(driver, timeout) {
 				}.until(new ExpectedCondition<Boolean>() {
+					@Override
 					public Boolean apply(WebDriver driver) {
 						return (driver.findElements(By.xpath("//*[contains(text(),'" + text + "')]")).size() < 1);
 					}
