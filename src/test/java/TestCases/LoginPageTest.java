@@ -1,5 +1,7 @@
 package TestCases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -75,8 +77,7 @@ public class LoginPageTest extends Globals{
 	}
 
 	
-	/*@Ignore 
-    @Test(priority = 1)
+/*    @Test(priority = 5)
     public void FindBrokenLink(){
 	//Used tagName method to collect the list of items with tagName "a"
     //findElements - to find all the elements with in the current page. It returns a list of all webelements or an empty list if nothing matches
@@ -93,8 +94,8 @@ public class LoginPageTest extends Globals{
           Reporter.log("Successfully all broken link is collected");    
               
 }
-}
-              */
+}*/
+              
         
 
 	
