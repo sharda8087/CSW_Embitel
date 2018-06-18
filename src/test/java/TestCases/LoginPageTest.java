@@ -26,7 +26,7 @@ public class LoginPageTest extends Globals{
 	browserNav(csw_url);*/
 	  		}
 	
-	@Test(priority = 1)
+	@Test(priority = 0)
 	public void closepop() {
 		login = new LoginPage(driver);
 		
@@ -38,7 +38,7 @@ public class LoginPageTest extends Globals{
 	
 	
 	
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void LoggedIn() throws Exception{
 	     login.clickProfileIcon.click();
 	     login.minicart.click();
@@ -61,7 +61,7 @@ public class LoginPageTest extends Globals{
 	}*/
 	
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void LoginPagetitleTest() {
 		String title = login.validateloginpageTitle();
 		Assert.assertEquals(title, "Shop Online for Women's Clothes, Bags, Shoes, Accessories in India - Cover Story");
@@ -69,7 +69,7 @@ public class LoginPageTest extends Globals{
 		}
 	
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void cswlogoImageTest() {
 		boolean flag = login.validatecswImage();
 		Assert.assertTrue(flag);

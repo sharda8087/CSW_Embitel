@@ -1,39 +1,46 @@
 package TestCases;
 
-import java.sql.Driver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.LoginPage;
+import Global.Globals;
 import PageObjects.PLPPageObject;
-import net.sourceforge.htmlunit.corejs.javascript.tools.shell.Global;
 
-public class PLPTestCases extends Global {
-	WebDriver driver;
+public class PLPTestCases extends Globals {
 
 	PLPPageObject plp;
-	LoginPage login;
-	
-	
-	
-	@Test
-	public void dropdown()
-	{
-	
-		plp.ClickDropdown.click();
-		Reporter.log("User clicked on the PLP Sort-Dropdown Arrow button");
-	     
+
+	@BeforeTest
+	public void LaunchBrowser() {
+		openurl();
+	}
+
+	@Test(priority=0)
+	public void Mouse_HoverOnL1() throws Exception{
+		plp.HoverOnClothingL1.click();
+		Thread.sleep(500);
+		Reporter.log("User mouse-Houver on the Clothing category");
+		
+		plp.ClickAllNew.click();
+		Reporter.log("user clicked on the All New sub-Category");
+		
+		
 	}
 	
-	public void GetListOfSort()
-	{
+	
+	
+	@Test(priority=1)
+	public void dropdown() {
 		plp.ClickDropdown.click();
-		
-		
 
-}
+		Reporter.log("User clicked on the PLP Sort-Dropdown Arrow button");
+
+	}
+
+	@Test(priority=3)
+	public void GetListOfSort() {
+		plp.ClickDropdown.click();
+
+	}
 }

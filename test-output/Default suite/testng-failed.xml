@@ -5,7 +5,10 @@
     <classes>
       <class name="TestCases.PLPTestCases">
         <methods>
+          <include name="Mouse_HoverOnL1"/>
           <include name="dropdown"/>
+          <include name="LaunchBrowser"/>
+          <include name="GetListOfSort"/>
         </methods>
       </class> <!-- TestCases.PLPTestCases -->
     </classes>

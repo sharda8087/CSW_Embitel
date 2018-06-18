@@ -1,63 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Browser open successfully]]>
-    </line>
-    <line>
-      <![CDATA[subscription pop-up is closed successfully]]>
-    </line>
-    <line>
-      <![CDATA[Logged In successfully]]>
-    </line>
-    <line>
-      <![CDATA[successfully Title is verified]]>
-    </line>
-    <line>
-      <![CDATA[coverstory logo is verified]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31347" started-at="2018-06-13T09:46:26Z" finished-at="2018-06-13T09:46:57Z">
+  <suite name="Default suite" duration-ms="115437" started-at="2018-06-18T09:46:09Z" finished-at="2018-06-18T09:48:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31347" started-at="2018-06-13T09:46:26Z" finished-at="2018-06-13T09:46:57Z">
-      <class name="TestCases.LoginPageTest">
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:TestCases.LoginPageTest@63e2203c]" name="launchbrowser" is-config="true" duration-ms="29029" started-at="2018-06-13T15:16:26Z" finished-at="2018-06-13T15:16:55Z">
+    <test name="Default test" duration-ms="115437" started-at="2018-06-18T09:46:09Z" finished-at="2018-06-18T09:48:05Z">
+      <class name="TestCases.PLPTestCases">
+        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:TestCases.PLPTestCases@63e2203c]" name="LaunchBrowser" is-config="true" duration-ms="115144" started-at="2018-06-18T15:16:09Z" finished-at="2018-06-18T15:18:04Z">
           <reporter-output>
-            <line>
-              <![CDATA[Browser open successfully]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="closepop()[pri:1, instance:TestCases.LoginPageTest@63e2203c]" name="closepop" duration-ms="272" started-at="2018-06-13T15:16:55Z" finished-at="2018-06-13T15:16:55Z">
+        </test-method> <!-- LaunchBrowser -->
+        <test-method status="FAIL" signature="Mouse_HoverOnL1()[pri:0, instance:TestCases.PLPTestCases@63e2203c]" name="Mouse_HoverOnL1" duration-ms="16" started-at="2018-06-18T15:18:05Z" finished-at="2018-06-18T15:18:05Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at TestCases.PLPTestCases.Mouse_HoverOnL1(PLPTestCases.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[subscription pop-up is closed successfully]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- closepop -->
-        <test-method status="PASS" signature="LoggedIn()[pri:2, instance:TestCases.LoginPageTest@63e2203c]" name="LoggedIn" duration-ms="1900" started-at="2018-06-13T15:16:55Z" finished-at="2018-06-13T15:16:57Z">
+        </test-method> <!-- Mouse_HoverOnL1 -->
+        <test-method status="FAIL" signature="dropdown()[pri:1, instance:TestCases.PLPTestCases@63e2203c]" name="dropdown" duration-ms="1" started-at="2018-06-18T15:18:05Z" finished-at="2018-06-18T15:18:05Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at TestCases.PLPTestCases.dropdown(PLPTestCases.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[Logged In successfully]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- LoggedIn -->
-        <test-method status="PASS" signature="LoginPagetitleTest()[pri:3, instance:TestCases.LoginPageTest@63e2203c]" name="LoginPagetitleTest" duration-ms="17" started-at="2018-06-13T15:16:57Z" finished-at="2018-06-13T15:16:57Z">
+        </test-method> <!-- dropdown -->
+        <test-method status="FAIL" signature="GetListOfSort()[pri:3, instance:TestCases.PLPTestCases@63e2203c]" name="GetListOfSort" duration-ms="2" started-at="2018-06-18T15:18:05Z" finished-at="2018-06-18T15:18:05Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at TestCases.PLPTestCases.GetListOfSort(PLPTestCases.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
-            <line>
-              <![CDATA[successfully Title is verified]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- LoginPagetitleTest -->
-        <test-method status="PASS" signature="cswlogoImageTest()[pri:4, instance:TestCases.LoginPageTest@63e2203c]" name="cswlogoImageTest" duration-ms="100" started-at="2018-06-13T15:16:57Z" finished-at="2018-06-13T15:16:57Z">
-          <reporter-output>
-            <line>
-              <![CDATA[coverstory logo is verified]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- cswlogoImageTest -->
-      </class> <!-- TestCases.LoginPageTest -->
+        </test-method> <!-- GetListOfSort -->
+      </class> <!-- TestCases.PLPTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

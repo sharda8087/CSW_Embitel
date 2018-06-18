@@ -10,12 +10,12 @@ import net.sourceforge.htmlunit.corejs.javascript.tools.shell.Global;
 
 public class PLPPageObject extends Global {
 	
-	public PLPPageObject(WebDriver driver)
-	{
+	public PLPPageObject(WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
 	
 	//Get all the Element from the Sort-Dropdown List
+	
 	
 	@FindBy(xpath=".//*[@id='content']/div[4]/div/div[3]/div[3]/div[2]/div/a/div/b")
 	@CacheLookup
@@ -24,6 +24,16 @@ public class PLPPageObject extends Global {
 	@FindBy(xpath=".//*[@id='content']/div[4]/div/div[3]/div[3]/div[2]/div/div/ul")
 	@CacheLookup
 	public WebElement GetListOfSortDropDown;
+	
+	// Mouse-Over on the L1 category
+	
+	@FindBy(xpath = ".//*[@id='main-menu']/ul/li[1]/div[1]/a[1]/span")
+	@CacheLookup
+	public WebElement HoverOnClothingL1;
+	
+	@FindBy(xpath=".//*[@id='main-menu']/ul/li[1]/div[2]/div[1]/div/div[1]/a/h3")
+	@CacheLookup
+	public WebElement ClickAllNew;
 	
 	
 	
