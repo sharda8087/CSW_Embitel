@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Global.Globals;
+import PageObjects.LoginPage;
 import PageObjects.PLPPageObject;
 
 public class PLPTestCases extends Globals {
@@ -13,24 +14,19 @@ public class PLPTestCases extends Globals {
 
 	@BeforeTest
 	public void LaunchBrowser() {
-		openurl();
+		driver.get(csw_url);
 	}
 
-	@Test(priority=0)
-	public void Mouse_HoverOnL1() throws Exception{
-		plp.HoverOnClothingL1.click();
-		Thread.sleep(500);
-		Reporter.log("User mouse-Houver on the Clothing category");
-		
-		plp.ClickAllNew.click();
-		Reporter.log("user clicked on the All New sub-Category");
-		
-		
+	@Test(priority = 0)
+	public void closepop1() {
+
+		// close pop-up
+		plp.closepopup.click();
+		Reporter.log("subscription pop-up is closed successfully");
+
 	}
-	
-	
-	
-	@Test(priority=1)
+
+	@Test(priority = 2)
 	public void dropdown() {
 		plp.ClickDropdown.click();
 
@@ -38,7 +34,7 @@ public class PLPTestCases extends Globals {
 
 	}
 
-	@Test(priority=3)
+	@Test(priority = 3)
 	public void GetListOfSort() {
 		plp.ClickDropdown.click();
 

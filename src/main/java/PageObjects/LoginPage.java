@@ -21,20 +21,18 @@ public class LoginPage extends Globals {
 	@FindBy(xpath = "//img[contains(@class, 'img-logo')]")
 	@CacheLookup
 	public WebElement cswlogo;
-	
+
 	@FindBy(xpath = ".//*[@id='popup-newsletter-form']/div[3]/img")
 	@CacheLookup
 	public WebElement closepopup;
-	
-	@FindBy(xpath= "/html/body")
+
+	@FindBy(xpath = "/html/body")
 	@CacheLookup
 	public WebElement closepopup1;
 
 	@FindBy(xpath = ".//*[@id='page']/header/div/div/div/div[4]/div/div[3]/span")
 	@CacheLookup
 	public WebElement clickProfileIcon;
-	
-	
 
 	// Finding locators for signin_popup
 	@FindBy(xpath = ".//*[@id='mini-cart-header']")
@@ -48,13 +46,12 @@ public class LoginPage extends Globals {
 	@FindBy(xpath = ".//*[@id='signPassword']")
 	@CacheLookup
 	public WebElement EnterPwd;
-	
 
 	@FindBy(xpath = ".//*[@id='stepOneSubmit']")
 	@CacheLookup
 	public WebElement ClickSigninbutton;
-	
-	@FindBy(xpath= "/html/body/div[1]/div/div/a")
+
+	@FindBy(xpath = "/html/body/div[1]/div/div/a")
 	@CacheLookup
 	public WebElement ClickReloadPage;
 
@@ -88,7 +85,15 @@ public class LoginPage extends Globals {
 	public void closePopUp() throws Exception {
 		Globals.IsClickable(closepopup, 30);
 	}
-	
-	
+
+	// Mouse-Over on the L1 category
+
+	@FindBy(xpath = "//span[contains(text(),'Clothing')]")
+	@CacheLookup
+	public WebElement HoverOnClothingL1;
+
+	@FindBy(xpath = "//h3[contains(text(),'All New')]")
+	@CacheLookup
+	public WebElement ClickAllNew;
 
 }

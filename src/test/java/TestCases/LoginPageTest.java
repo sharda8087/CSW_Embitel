@@ -37,7 +37,6 @@ public class LoginPageTest extends Globals{
 	}	  
 	
 	
-	
 	@Test(priority = 1)
 	public void LoggedIn() throws Exception{
 	     login.clickProfileIcon.click();
@@ -60,6 +59,17 @@ public class LoginPageTest extends Globals{
 		
 	}*/
 	
+	@Test(priority = 4)
+	public void Mouse_HoverOnL1() throws Exception {
+	
+		login.HoverOnClothingL1.click();
+		Thread.sleep(1000);
+		Reporter.log("User mouse-Houver on the Clothing category");
+
+		login.ClickAllNew.click();
+		Reporter.log("user clicked on the All New sub-Category");
+
+	}
 	
 	@Test(priority = 2)
 	public void LoginPagetitleTest() {
@@ -95,8 +105,6 @@ public class LoginPageTest extends Globals{
               
 }
 }*/
-              
-        
 
 	
 	/*@AfterMethod

@@ -74,7 +74,7 @@ public class Globals {
 		
 		//Url username & password
 		
-		public static String csw_url = "https://www.coverstory.co.in/";
+		public static String csw_url = "https://www.coverstory.co.in/new-products/clothing/";
 		public static String amazon_EmailId = "sharma.sharda15@gmail.com";
 		public static String amazon_Password = "sharda123";
 		
