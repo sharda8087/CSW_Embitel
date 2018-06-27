@@ -26,10 +26,6 @@ public class LoginPage extends Globals {
 	@CacheLookup
 	public WebElement closepopup;
 
-	@FindBy(xpath = "/html/body")
-	@CacheLookup
-	public WebElement closepopup1;
-
 	@FindBy(xpath = ".//*[@id='page']/header/div/div/div/div[4]/div/div[3]/span")
 	@CacheLookup
 	public WebElement clickProfileIcon;
@@ -85,15 +81,5 @@ public class LoginPage extends Globals {
 	public void closePopUp() throws Exception {
 		Globals.IsClickable(closepopup, 30);
 	}
-
-	// Mouse-Over on the L1 category
-
-	@FindBy(xpath = "//span[contains(text(),'Clothing')]")
-	@CacheLookup
-	public WebElement HoverOnClothingL1;
-
-	@FindBy(xpath = "//h3[contains(text(),'All New')]")
-	@CacheLookup
-	public WebElement ClickAllNew;
 
 }

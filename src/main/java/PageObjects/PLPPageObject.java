@@ -14,12 +14,6 @@ public class PLPPageObject extends Global {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Locators for subscription pop-up
-
-	@FindBy(xpath = ".//*[@id='popup-newsletter-form']/div[3]/img")
-	@CacheLookup
-	public WebElement closepopup;
-
 	// Get all the Element from the Sort-Dropdown List
 
 	@FindBy(xpath = ".//*[@id='content']/div[4]/div/div[3]/div[3]/div[2]/div/a/div/b")
@@ -30,5 +24,19 @@ public class PLPPageObject extends Global {
 	@CacheLookup
 	public WebElement GetListOfSortDropDown;
 
-	
+	// Close Pop-up
+	@FindBy(xpath = ".//*[@id='popup-newsletter-form']/div[3]/img")
+	@CacheLookup
+	public WebElement closepopup_1;
+
+	// Mouse-Over on the L1 category
+
+	@FindBy(xpath = "//span[contains(text(),'Clothing')]")
+	@CacheLookup
+	public WebElement HoverOnClothingL1;
+
+	@FindBy(xpath = "//h3[contains(text(),'All New')]")
+	@CacheLookup
+	public WebElement ClickAllNew;
+
 }
